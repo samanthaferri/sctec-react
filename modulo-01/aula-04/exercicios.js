@@ -1,4 +1,4 @@
-/* //conte de 5 até 1 e escreva Já
+//conte de 5 até 1 e escreva Já
 for (i = 5; i >= 1; i--) {
     console.log(i);
 }
@@ -12,7 +12,7 @@ while (cont <= 10) {
     soma = soma + cont;
     cont++;
 }
- */
+
 //gere um número (de 1 a 5) para o usuário adivinhar até acertar
 const prompt = require('prompt-sync')();
 let numero = 3;
