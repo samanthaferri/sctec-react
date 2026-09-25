@@ -18,7 +18,7 @@ let descontoOferecido;
 if(precoOriginal > 100) {
     descontoOferecido = Number(prompt("Qual é a porcentagem do desconto (ex.: 10)? "));
     console.log(`O valor original do produto é R$${precoOriginal} e o desconto é de ${descontoOferecido}%`);
-    console.log(`Então, o preço final: ${precoFinal(precoOriginal, descontoOferecido).toFixed(2)}`)
+    console.log(`Então, o preço final é de: R$${precoFinal(precoOriginal, descontoOferecido).toFixed(2)}`)
 }
 
 
