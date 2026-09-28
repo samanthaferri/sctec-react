@@ -15,8 +15,7 @@ while (cont <= 10) {
  */
 //gere um número (de 1 a 5) para o usuário adivinhar até acertar
 const prompt = require('prompt-sync')();
-let numero = 3;
-let adivinhacao;
+let numeroAleatorio = Math.floor(Math.random() * 5) + 1;
 
 do {
     adivinhacao = Number(prompt("Escolha um número de 1 a 5 (usando somente números): "));
@@ -24,9 +23,9 @@ do {
     if (Number.isNaN(adivinhacao)) {
         console.log("sam");
     }
-    if (adivinhacao === numero) {
+    if (adivinhacao === numeroAleatorio) {
         console.log("Você acertou!");
     } else {
         console.log("Você errou, tente novamente.");
     }
-} while (adivinhacao !== numero);
+} while (adivinhacao !== numeroAleatorio);
