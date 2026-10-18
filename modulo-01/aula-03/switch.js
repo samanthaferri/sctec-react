@@ -1,7 +1,9 @@
+const prompt = require("prompt-sync")();
+
 //calculadora
 let num1 = 6;
 let num2 = 3;
-let operador = "0";
+let operador = prompt("Escolha uma operação (+, -, *, / ou %): ");
 
 switch (operador) {
   case "+":
