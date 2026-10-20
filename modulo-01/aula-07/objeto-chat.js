@@ -67,7 +67,9 @@ console.log("\n========\n");
 
 // Verificar se uma propriedade existe
 // O método Object.hasOwn() verifica se o objeto possui determinada propriedade, retornando true ou false.
-console.log(`Verificar se propriedade nome existe (object.hasown):`);
+console.log(
+  `Verificar se propriedade nome existe (object.hasown):`,
+);
 console.log(Object.hasOwn(produto));
 
 /* Resumo dos principais comandos
