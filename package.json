@@ -20,5 +20,8 @@
   "homepage": "https://github.com/samanthaferri/sctec-react#readme",
   "dependencies": {
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "prettier-plugin-multiline-arrays": "^4.1.11"
   }
 }
