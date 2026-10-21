@@ -5,14 +5,14 @@ class Cliente {
     dataNascimento,
     telefone,
     email,
-    endereço
+    endereco
   ) {
     this.nome = nome; //String
     this.sobrenome = sobrenome; //String
     this.dataNascimento = dataNascimento; //String
     this.telefone = telefone; //String
     this.email = email; //String
-    this.endereco = this.endereco; //String
+    this.endereco = endereco; //String
   }
 
   nomeCompleto() {
