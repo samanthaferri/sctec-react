@@ -64,10 +64,7 @@ function buscaReceitasSobremesa() {
 
 async function main() {
   const receitasResponse = await buscaReceitas();
-  const listaReceitas = receitasResponse.map(
-    (receitaObj) =>
-      new Receita(receitaObj.nome, receitaObj.ingredientes, receitaObj.minutos),
-  );
+  const listaReceitas = receitasResponse.map((receitaObj) => new Receita(receitaObj.nome, receitaObj.ingredientes, receitaObj.minutos));
 
   //const receitasSobremesaResponse = await
 

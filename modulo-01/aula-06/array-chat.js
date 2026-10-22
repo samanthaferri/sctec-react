@@ -13,9 +13,24 @@ Importante:
 //OPERAÇÕES BÁSICAS
 
 //Armazenar
-const frutas = ["Maçã", "Banana", "Uva", "Amora"];
-const notas = [7, 8, 10];
-const numeros = [1, 2, 3, 4, 5];
+const frutas = [
+  "Maçã",
+  "Banana",
+  "Uva",
+  "Amora",
+];
+const notas = [
+  7,
+  8,
+  10,
+];
+const numeros = [
+  1,
+  2,
+  3,
+  4,
+  5,
+];
 const vazio = [];
 
 //Acessar um elemento: colocamos o índice entre []
@@ -86,14 +101,20 @@ console.log(`unshift() adicionou no começo: ${frutas}`);
 console.log("====================");
 console.log(`Frutas: ${frutas}`);
 
-console.log(`includes() verificando se existe Banana: ${frutas.includes("Banana")}`);
-console.log(`includes() verificando se existe Pêra: ${frutas.includes("Pêra")}`);
+console.log(
+  `includes() verificando se existe Banana: ${frutas.includes("Banana")}`,
+);
+console.log(
+  `includes() verificando se existe Pêra: ${frutas.includes("Pêra")}`,
+);
 
 //INDEX OF: Encontra a posição
 console.log("====================");
 console.log(`Frutas: ${frutas}`);
 
-console.log(`indexOf() verificando a posição de Amora: ${frutas.indexOf("Amora")}`);
+console.log(
+  `indexOf() verificando a posição de Amora: ${frutas.indexOf("Amora")}`,
+);
 
 //AT: Acessa pela posição
 console.log("====================");
@@ -115,7 +136,9 @@ frutas.sort();
 console.log(`sort() ordenou os elementos: ${frutas}`);
 
 console.log(`Notas: ${notas}`);
-console.log(`sort() sem parâmetros não ordena numericamente como esperaríamos: ${notas}`);
+console.log(
+  `sort() sem parâmetros não ordena numericamente como esperaríamos: ${notas}`,
+);
 
 //REVERSE: Inverte a ordem
 console.log("====================");
