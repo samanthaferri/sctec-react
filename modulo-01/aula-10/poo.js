@@ -1,50 +1,38 @@
-/* Classe → O “molde” para criar objetos
-Objeto → A "coisa" criada a partir do molde
-Atributos → As características do objeto (nome, idade...)
-Constructor → O método que inicializa os atributos
-this → Referência ao "objeto atual"
-Métodos → As ações que o objeto pode fazer
-Herança → Uma classe "herdar" de outra
-super → Chamar o construtor da classe pai
-Sobrescrita de método → A classe filha substituir um método do pai */
+/* 
+Os 4 pilares da POO: abstração, encapsulamento, herança e polimorfismo
+- ABSTRAÇÃO: guardar do mundo real só o que importa pro sistema
+- ENCAPSULAMENTO: os dados e os métodos que mexem neles ficam juntos
+- HERANÇA: uma classe aproveita o que a outra já tem
+- POLIMORFISMO: o mesmo método responde diferente em cada objeto
 
-class Aluno {
-    constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
+NEW
+Ele cria o objeto -> liga esse objeto ao molde (classe) -> roda o constructor (se houver) -> devolve o objeto pronto pra usar em uma variável
 
-    //metodo fazer prova
-    fazerProva() {
-        console.log(`O aluno ${this.nome} está fazendo a prova`)
-    }
+HERANÇA
+é um conceito da POO que permite uma classe reutilizar características e métodos de outra classe.
+Em vez de repetir o mesmo código em várias classes diferentes, criamos uma classe mais genérica com tudo que é comum e fazemos outras classes herdarem essas funcionalidades.
+A classe que compartilha características é chamada de pai/mãe (superclasse), enquanto as classes que recebem essas características são chamadas de filhas.
+
+EXTENDS
+é a palavra reservada utilizada para criar este conceito de herança entre classes.
+quando usamos extends, estamos dizendo que uma classe irá herdar atributos e métodos de outra classe.
+Assim, a nova classe passa a ter acesso a tudo que existe na classe pai, podendo reutilizar funcionalidades sem precisar recriar o código. 
+*/
+
+class Funcionario {
+  constructor(nome, salario) {
+    this.nome = nome;
+    this.salario = salario;
+  }
 }
 
-const aluno1 = new Aluno("Samantha", 32);
-//console.log(aluno1);
-//aluno1.fazerProva();
+class Gerente extends Funcionario {
+  constructor(nome, salario, bonus) {
+    super(nome, salario);
+    this.bonus = bonus;
+  }
 
-//exemplo this
-class Conta {
-    titular = "";
-    saldo = 0;
-
-    constructor(titular) {
-        this.titular = titular;
-    }
-
-    depositar(valor) {
-        this.saldo += valor;
-        console.log(`Depósito de R$${valor.toFixed(2)} realizado na conta de ${this.titular} com sucesso!`)
-    }
-
-    checarSaldo() {
-        return `Saldo da conta de ${this.titular}: R$${this.saldo.toFixed(2)}`;
-    }
+  salarioTotal() {
+    return this.salario + this.bonus;
+  }
 }
-
-const conta1 = new Conta("Samantha");
-const conta2 = new Conta("Manuela");
-
-conta1.depositar(10);
-console.log(conta2.checarSaldo());

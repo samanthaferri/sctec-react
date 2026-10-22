@@ -1,10 +1,10 @@
 //Cadastrar um produto
 const produto = {
-    nome: "Camiseta de Banda",
-    preco: 49.90,
-    qdEstoque: 10,
-    disponivel: true
-}
+  nome: "Camiseta de Banda",
+  preco: 49.9,
+  qdEstoque: 10,
+  disponivel: true,
+};
 
 console.log(produto);
 console.log(produto.nome);
@@ -18,7 +18,6 @@ console.log(produto);
 //deletar atributos
 delete produto.descricao;
 console.log(produto);
-
 
 //ver atributos do objeto
 console.log(Object.keys(produto));
